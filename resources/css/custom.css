@@ -1,42 +1,41 @@
-article > *:not(.entry-content),
-.entry-content > * {
-    @apply mx-auto max-w-content;
-}
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+.entry-content,
+.block-editor-block-list__layout {
+  h1 {
+    @apply text-2xl;
+  }
 
-.entry-content, .block-editor-block-list__layout {
-    h1 {
-        @apply text-2xl;
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+  p,
+  ul,
+  ol {
+    a {
+      @apply text-blue-500 underline;
+
+      &:hover {
+        @apply no-underline;
+      }
     }
 
-    h2 {
-        @apply text-xl;
+    @apply mb-8;
+  }
+
+  ul:not(.block-editor-block-variation-picker__variations) {
+    li {
+      @apply list-disc list-inside;
     }
+  }
 
-    h3 {
-        @apply text-lg;
+  ol {
+    li {
+      @apply list-decimal list-inside;
     }
-
-    p, ul, ol {
-        a {
-            @apply text-blue-500 underline;
-
-            &:hover {
-                @apply no-underline;
-            }
-        }
-
-        @apply mb-8;
-    }
-
-    ul:not(.block-editor-block-variation-picker__variations) {
-        li {
-            @apply list-disc list-inside;
-        }
-    }
-
-    ol {
-        li {
-            @apply list-decimal list-inside;
-        }
-    }
+  }
 }
